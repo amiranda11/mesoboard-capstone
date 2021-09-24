@@ -1,0 +1,11 @@
+/node_modules/
+Authentication.md
+*.log
+Logs/error.log
+Logs/info.log
+config/env/development.js
+controllers/taskexample.js
+template.html
+*.log
+models/dbexport.pgsql
+.vscode/settings.json
