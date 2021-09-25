@@ -34,7 +34,7 @@ const AuthProvider = ({ children }) => {
     // })
   }
 
-  const registrationHandler = user => {
+  const verifyPermissionHandler = user => {
     // dispatchAuthAction({
     //   type: 'REGISTER',
     //   payload: user
@@ -46,7 +46,7 @@ const AuthProvider = ({ children }) => {
     token: authState?.token,
     signin: signinHandler,
     signout: signoutHandler,
-    register: registrationHandler
+    verifyPermission: verifyPermissionHandler
   }
 
   return <AuthContext.Provider value={authContext}>

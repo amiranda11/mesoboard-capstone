@@ -1,9 +1,9 @@
 import { useContext } from 'react' //rafce shortcut
 import './App.css';
 import { BrowserRouter as Router, Route, Redirect } from 'react-router-dom'
-import { Signin } from './content/index';
 import { Layout } from './layout/index'
 import { AuthContext, AuthProvider } from './store/index';
+import { Signin, VerifyPermission } from './authentication/index';
 
 const ProtectedRoute = ({ children, ...rest }) => {
   const { token } = useContext(AuthContext)
@@ -39,11 +39,13 @@ function App() {
   //   }
   //   callApi()
   // }, [])
+
   return (
     <AuthProvider>
       <Router>
         <Route exact path='/'><Redirect to='/signin' /></Route>
-        <Route path='/signin' component={Signin} />
+        <Route exact path='/authenticate' component={VerifyPermission} />
+        <Route exact path='/signin' component={Signin} />
         <ProtectedRoute path='/app/:view'>
           <Layout />
         </ProtectedRoute>
