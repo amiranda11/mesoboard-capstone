@@ -28,13 +28,6 @@
   outline: 1px solid #d8d8d8ad;
 }
 
-hr {
-  margin: -1px auto 0;
-  opacity: 1;
-  color: #d8d8d8ad;
-  width: 82.5%;
-}
-
 
 @media only screen and (max-width: 425px) {
   .layout {

@@ -23,6 +23,12 @@ a:hover {
   text-decoration: none !important;
 }
 
+hr {
+  margin: 0;
+  opacity: 1 !important;
+  color: #d8d8d8 !important;
+}
+
 /* .btn-primary {
   background-color: linear-gradient(180deg, #287F4E 0%, #1A9C53 25%, #0FCA61 100%);
   border-color: #287F4E;
